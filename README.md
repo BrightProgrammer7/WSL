@@ -1,6 +1,6 @@
-"# hello WSL!" 
+"# WSL" 
 
-
+wsl --install
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
 wsl --version
@@ -156,11 +156,6 @@ sudo apt update
 sudo apt upgrade -y
 
 
-code ~/.bashrc # vscode 
-vim ~/.bashrc # vim
-![vim](vim.png)
-
-
 export PS1="\w$ " # full working dir
 export PS1="\W$ " # basename of working dir
 export PS1="\u@\W $ " # username @ working dir
@@ -175,17 +170,53 @@ export PS1="[\t] \u@\h:\w\$ " # timestamp + username + host + working dir
 \@ time 12-hour am/pm
 
 
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+sudo apt-get install fonts-powerline
+code ~/.zshrc # to customize it
+
+apt install nodejs
+console.log(process.platform)
+node script.js
+linux
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+plugins=(git nvm) ~/.zshrc 
+nvm install --lts
+nvm use 16
+node -v
+npm -v
+
+sudo apt install git
+git --version
+git config --global user.name "Clever Coder"
+git config --global user.email "clever@coding.ai"
+git config --global credential.helper cache --timeout=2628000
+
+sudo apt autoremove && sudo apt update
+
+sudo apt install gh
+gh issue list --repo fireship-io/fireship.io
 
 
+Google Chrome - Best for JS Debugging
+Mozilla Firefox - Best for CSS Debugging
+Brave - See how your site behaves on a privacy-conscious environment
 
+Get-PoshThemes
+oh-my-posh get shell
+New-Item -Path $PROFILE -Type File -Force
+notepad $PROFILE
+oh-my-posh init pwsh --config 'C:\Users\cleve\AppData\Local\Programs\oh-my-posh\themes\cloud-native-azure.json' | Invoke-Expression
+. $PROFILE
 
+cd C:\Users\cleve\AppData\Local\clink\
+notepad oh-my-posh.lua
+load(io.popen('oh-my-posh init cmd'):read("*a"))()
+load(io.popen('oh-my-posh init cmd --config C:/Users/cleve/AppData/Local/Programs/oh-my-posh/themes/dracula.omp.json'):read("*a"))()
 
-
-
-
-
-
-
-
-
+code ~/.bashrc # vscode 
+vim ~/.bashrc # vim
+![vim](vim.png)
 
