@@ -158,6 +158,7 @@ sudo apt upgrade -y
 
 code ~/.bashrc # vscode 
 vim ~/.bashrc # vim
+![vim](vim.png)
 
 
 export PS1="\w$ " # full working dir
