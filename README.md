@@ -220,3 +220,29 @@ code ~/.bashrc # vscode
 vim ~/.bashrc # vim
 ![vim](vim.png)
 
+grep -i "vim" README.md   # find text in file
+
+du . # view disk usage for files in wd
+du -h README.md  # view disk usage 8.0K bytes
+ls -l  # list files & view permissions drwxr-
+chown hacker README.md   # change owner
+chmod 754 README.md   # change permissions
+
+sudo   # superuser do
+sudo head README.md    # read initial lines
+sudo tail README.md   # read final lines
+
+sudo apt-get install sl   # install packages
+sudo apt-get update  # update packages and dependencies
+
+history  # preview commands
+
+touch linode{1..2}  # create a bunch of files
+touch -d tomorrow futurFile  # create a file from future
+
+echo "Hello Me"  # talk to mySelf
+echo "Stupid stuff" > hbil.awesome  # talk to mySelf
+nano hbil.awesome  # edit file like linux pro 
+vim  hbil.awesome  # edit file like linux legend  // Esc + :wq
+cat  hbil.awesome  # read file quickly
+shred hbil.awesome   # cipher file content
