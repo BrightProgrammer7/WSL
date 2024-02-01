@@ -1,7 +1,7 @@
 "# WSL" 
-
-wsl --install
+>PowerShell:
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+wsl --install
 
 wsl --version
 wsl date
@@ -242,7 +242,25 @@ touch -d tomorrow futurFile  # create a file from future
 
 echo "Hello Me"  # talk to mySelf
 echo "Stupid stuff" > hbil.awesome  # talk to mySelf
-nano hbil.awesome  # edit file like linux pro 
+nano hbil.awesome  # edit file like linux pro
 vim  hbil.awesome  # edit file like linux legend  // Esc + :wq
 cat  hbil.awesome  # read file quickly
 shred hbil.awesome   # cipher file content
+
+
+# Kali Linux on WSL
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+wsl --install
+wsl --set-default-version 2
+https://www.kali.org/docs/troubleshooting/common-minimum-setup/
+touch ~/.hushlogin
+cat /etc/os-release
+sudo apt update && sudo apt upgrade -y
+sudo apt install kali-desktop-xfce -y
+wsl --list --verbose
+sudo apt install xrdp -y
+sudo service xrdp start
+sudo apt install theharvester -y
+theharvester -d davidbombal.com -b google
