@@ -237,16 +237,6 @@ sudo apt-get update  # update packages and dependencies
 
 history  # preview commands
 
-touch linode{1..2}  # create a bunch of files
-touch -d tomorrow futurFile  # create a file from future
-
-echo "Hello Me"  # talk to mySelf
-echo "Stupid stuff" > hbil.awesome  # talk to mySelf
-nano hbil.awesome  # edit file like linux pro
-vim  hbil.awesome  # edit file like linux legend  // Esc + :wq
-cat  hbil.awesome  # read file quickly
-shred hbil.awesome   # cipher file content
-
 
 # Kali Linux on WSL
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -257,10 +247,155 @@ wsl --set-default-version 2
 https://www.kali.org/docs/troubleshooting/common-minimum-setup/
 touch ~/.hushlogin
 cat /etc/os-release
+
 sudo apt update && sudo apt upgrade -y
 sudo apt install kali-desktop-xfce -y
 wsl --list --verbose
 sudo apt install xrdp -y
+
 sudo service xrdp start
-sudo apt install theharvester -y
-theharvester -d davidbombal.com -b google
+ip add @172.29.186.136
+
+sudo apt install theharvester -y  
+theHarvester -d learn.networkchuck.com -b bing  # gather info about companies or hacking target [theHarvester -d "domain/company" -l 200 -b source]
+
+# WPS attack
+sudo apt install wifite
+wifite -h
+sudo wifite
+sudo apt install bettercap -y --fix-missing 
+sudo bettercap -iface lo/eth0/wlan0
+net.probe on
+net.show
+
+
+https://www.dropbox.com/s/g1ih02ka62x6m72/compat-wireless-2010-06-26-p.tar.bz2?dl=0&file_subpath=/compat-wireless-2010-06-26-p
+tar -jvxf compat-wireless-2010-06-26-p.tar.bz2
+ls -ltrha 
+
+
+# 60 Linux Essential Commands
+ssh
+ls
+pwd
+cd
+touch
+echo
+nano
+vim
+cat
+shred
+mkdir
+cp
+rm
+rmdir
+ln
+clear
+whoami
+useradd
+sudo
+adduser
+su
+exit
+passwd
+apt
+finger
+man
+whatis
+curl
+zip
+unzip
+less
+head
+tail
+cmp
+diff
+sort
+find
+chmod
+chown
+ifconfig
+ip address
+grep
+awk
+resolvectl status
+ping
+netstat
+ss
+iptables
+ufw
+uname
+neofetch
+cal
+free
+df
+ps
+top
+htop
+kill
+pkill
+systemctl
+history
+reboot
+shutdown
+
+
+# Practice Linux CMD
+ssh cleverhacker@172.29.186.136
+ls -la
+pwd 
+cd 
+
+touch linode{1..2}  # create a bunch of files
+touch -d tomorrow futurFile  # create a file from future
+
+echo "Hello Me"  # talk to mySelf
+echo "Stupid stuff" > hbil.awesome  # talk to mySelf
+nano hbil.awesome  # edit file like linux pro  // Ctrl + c + y
+vim  hbil.awesome  # edit file like linux legend  // Esc + :wq
+cat  hbil.awesome  # read file quickly
+shred hbil.awesome   # cipher file content
+
+mkdir newDirectory
+cp hbil.awesome ./newDirectory 
+ls newDirectory/
+mv hbil.awesome ./newDirectory
+rm newDirectory/hbil.awesome
+rmdir newDirectory
+rm -r fullDir
+ln -s sirr.goo fileLink
+
+clear
+whoami
+
+sudo useradd hacker
+sudo adduser hacker
+su hacker
+exit
+sudo passwd hacker
+
+sudo apt install finger
+finger hacker
+
+man finger
+whatis finger
+which finger
+whereis finger
+
+wget https://raw.githubusercontent.com/raspberrypi/linux/rpi-4.9.y/arch/arm/configs/bcmrpi_defconfig
+curl https://raw.githubusercontent.com/raspberrypi/linux/rpi-4.9.y/arch/arm/configs/bcmrpi_defconfig -o bcmrpi_defconfig
+
+apt install zip
+zip bcmrpi_defcfg.zip bcmrpi_defcfg
+unzip bcmrpi_defcfg.zip
+
+less bcmrpi_defcfg_unziped 
+head bcmrpi_defcfg_unziped 
+tail bcmrpi_defcfg_unziped 
+
+cmp bcmrpi_defcfg bcmrpi_defconfig  
+diff bcmrpi_defcfg bcmrpi_defconfig
+
+cat bcmrpi_defconfig | sort
+sudo find / -name "bcmrpi_defcfg*"
+sudo find . -type f -name ".*" 
