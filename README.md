@@ -395,7 +395,9 @@ tail bcmrpi_defcfg_unziped
 
 cmp bcmrpi_defcfg bcmrpi_defconfig  
 diff bcmrpi_defcfg bcmrpi_defconfig
-
 cat bcmrpi_defconfig | sort
+
 sudo find / -name "bcmrpi_defcfg*"
 sudo find . -type f -name ".*" 
+find . -type f -empty 
+find . -perm /a=x
