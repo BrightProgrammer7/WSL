@@ -401,3 +401,30 @@ sudo find / -name "bcmrpi_defcfg*"
 sudo find . -type f -name ".*" 
 find . -type f -empty 
 find . -perm /a=x
+
+chmod +x executable.sh
+chown cleverunix executable.sh
+
+# Network CMD
+sudo apt install net-tools
+ifconfig
+ip address 
+ip add | grep eth0
+ip add | grep eth0 | grep inet
+ip add | grep eth0 | grep inet | awk '{print $2}'
+
+cat /etc/resolv.conf
+resolvectl status 
+
+ping morocco.com 
+ping -c 4 -s 500 google.com 
+
+sudo apt install traceroute
+traceroute google.com
+
+netstat -tulpn
+ss -tulpn     
+
+
+
+
